@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+      AWS_DEFAULT_REGION: ap-southeast-2
 
     # Only deploy on the master branch
     if: ${{ github.ref == 'refs/heads/master' }}
@@ -20,4 +21,3 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          REGION: ap-southeast-2
