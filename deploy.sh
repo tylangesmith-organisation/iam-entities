@@ -4,16 +4,17 @@ set -euo pipefail
 
 BRANCH_NAME=${GITHUB_REF##*/}
 echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
+echo "${GITHUB_ENV}"
 
-# Install our npm dependencies
-echo "--- 🚀 Installing npm dependencies..."
-npm i
+# # Install our npm dependencies
+# echo "--- 🚀 Installing npm dependencies..."
+# npm i
 
-# Deploy the cdk stack
-echo "--- 🚀 Deploying CDK stack..."
-npx cdk \
-  --require-approval never \
-  --verbose \
-  --execute true \
-  --app "ts-node ./src/index.ts" \
-  deploy
+# # # Deploy the cdk stack
+# # echo "--- 🚀 Deploying CDK stack..."
+# # npx cdk \
+# #   --require-approval never \
+# #   --verbose \
+# #   --execute true \
+# #   --app "ts-node ./src/index.ts" \
+# #   deploy
