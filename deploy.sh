@@ -13,7 +13,6 @@ npm i
 echo "--- 🚀 Deploying CDK stack..."
 npx cdk \
   --require-approval never \
-  --trace \
   --verbose \
   --execute true \
   --app "ts-node ./src/index.ts" \
