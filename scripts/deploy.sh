@@ -12,6 +12,7 @@ npx cdk \
   --require-approval never \
   --verbose \
   --execute true \
+  --force \
   --toolkit-stack-name "cdk-toolkit-master-${ACCOUNT_ID}" \
   --app "ts-node ./src/index.ts" \
   deploy
