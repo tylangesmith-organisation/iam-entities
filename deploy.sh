@@ -3,8 +3,7 @@
 set -euo pipefail
 
 BRANCH_NAME=${GITHUB_REF##*/}
-echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
-echo "${GITHUB_ENV}"
+echo "BRANCH_NAME=TEST" >> $GITHUB_ENV
 
 # # Install our npm dependencies
 # echo "--- 🚀 Installing npm dependencies..."
