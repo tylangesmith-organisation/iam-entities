@@ -1,7 +1,7 @@
 import { App } from '@aws-cdk/core';
 import IamEntities from './stack';
 
-console.log(`BRANCH_NAME: ${process.env.BRANCH_NAME}`)
+console.log(process.env)
 
 const app = new App()
 new IamEntities(app, {
