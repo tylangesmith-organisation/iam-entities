@@ -1,5 +1,5 @@
 
-![Build](https://github.com/tylangesmith/iam-entities/actions/workflows/deploy.yml/badge.svg?branch=master)
+![Build](https://github.com/tylangesmith-organisation/iam-entities/actions/workflows/deploy.yml/badge.svg?branch=master)
 
 # IAM Entities
 
