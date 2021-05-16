@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tylangesmith/iam-entities.git"
+    "url": "git+https://github.com/tylangesmith-organisation/iam-entities.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tylangesmith/iam-entities/issues"
+    "url": "https://github.com/tylangesmith-organisation/iam-entities/issues"
   },
-  "homepage": "https://github.com/tylangesmith/iam-entities#readme",
+  "homepage": "https://github.com/tylangesmith-organisation/iam-entities#readme",
   "dependencies": {
     "@aws-cdk/aws-iam": "^1.103.0",
     "@aws-cdk/aws-sso": "^1.103.0",
