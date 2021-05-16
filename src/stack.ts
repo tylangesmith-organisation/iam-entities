@@ -1,5 +1,5 @@
 import { App, Stack, StackProps } from '@aws-cdk/core';
-import { createDeployerUser } from './users';
+import createDeployer from './deployer';
 
 export interface Props extends StackProps { }
 
@@ -7,8 +7,8 @@ export default class IamEntities extends Stack {
   constructor(scope: App, props: Props) {
     super(scope, 'iamEntities', props);
 
-    // Let's create the deployer users and their policies
-    createDeployerUser({
+    // Let's create the deployer user and it's policies
+    createDeployer({
       scope: this
     })
 
