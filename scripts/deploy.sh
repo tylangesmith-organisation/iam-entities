@@ -13,6 +13,6 @@ npx cdk \
   --verbose \
   --execute true \
   --force \
-  --toolkit-stack-name "cdk-toolkit-master-${ACCOUNT_ID}" \
+  --toolkit-stack-name "cdk-toolkit-master" \
   --app "ts-node ./src/index.ts" \
   deploy
