@@ -1,5 +1,5 @@
 import { App, Stack, StackProps } from '@aws-cdk/core';
-import createDeployer from './deployer';
+import createDeployer from '@/deployer';
 
 export interface Props extends StackProps { }
 

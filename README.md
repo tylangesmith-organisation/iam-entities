@@ -3,17 +3,17 @@
 
 # IAM Entities
 
-This repo is used to deploy and maintain various IAM entities. 
+This repo is used to deploy and maintain various IAM entities.
 
 For our current use case however, we only deploy an IAM user and it's policy for usage when deploying from Github Actions.
 
 ## Bootstrapping
 
-As you are probably thinking 🤔... _"How can you deploy the IAM deployer user without the IAM deploy user?"_.
+As you are probably thinking - _"How can you deploy the IAM deployer user without the IAM deployer user?"_.
 
 Ahh yes, the ol' chicken 🐓 and the egg 🥚 problem.
 
-To get around this we'll first need to manually create an IAM user and attach a policy that allows us to deploy the resources we require. 
+To get around this we'll first need to manually create an IAM user and attach a policy that allows us to deploy the resources we require.
 
 Once we have that we'll then be able to go ahead and create the access keys and use them to be able to deploy this stack.
 
@@ -33,10 +33,8 @@ These secret variables are:
 
 ## Danger
 
+> I believe we can add a [Permission Boundary](https://aws.amazon.com/premiumsupport/knowledge-center/iam-permission-boundaries/) to solve this
+
 As you can probably see the IAM policy for the deployer role is extremely open 🚨
 
 For my use case however, Github Actions is used to deploy. This CI / CD pipeline will only ever be triggered by myself as no other users have write access.
-
-Each of the sensitive values are all encapsulated behind Github secrets which are automatically _redacted_ from the CI / CD logs. Obviously there are ways to get around this but again I will be the only person that is able to run the CI / CD against this project and all projects in this organisation 🤞
-
-If we ever wanted to allow outside contributors we'd have to rethink how we achieve this CI / CD. We _may_ be able to implement and enforce a more fine grained permission set on a project by project level along with only deploying resources on the master branch requiring rigid code reviews before merging. 🤔
